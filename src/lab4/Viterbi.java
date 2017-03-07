@@ -8,8 +8,6 @@ import java.util.*;
 /**
  * Skeleton for a Viterbi POS tagger.
  *
- * @author Fabian M. Suchanek
- *
  */
 public class Viterbi {
 
@@ -93,110 +91,6 @@ public class Viterbi {
         Collections.reverse(ReversedTagging);
         return ReversedTagging;
     }
-
-//        int IndexOfWord = 0;
-//        for(String word:words){
-//            int IndexOfTag = 0;
-//            for(String tag:tags){
-//                Double p = .0;
-//                Double Proba = .0;
-//                int PrevTagIndex = 0;
-//                if(IndexOfWord<=1){
-//                    if(model.emissionProb.get(tag).get(word)!=null)
-//                        Proba = model.emissionProb.get(tag).get(word);
-//                    else{Proba = .0;}
-//                }
-//                else{
-//                    int IndexOfPrevTag = 0;
-//                    for(String PrevTag:tags){
-//                        if(model.emissionProb.get(tag).get(word)==null
-//                                ||model.transitionProb.get(PrevTag).get(tag)==null){p=.0;}
-//                        else{
-//                            p = TagAndWord[IndexOfPrevTag][IndexOfWord-1]
-//                                    * model.emissionProb.get(tag).get(word)
-//                                    * model.transitionProb.get(PrevTag).get(tag);
-//                        }
-//                        if(p>Proba){
-//                            Proba = p;
-//                            PrevTagIndex = IndexOfPrevTag;
-//                        }
-//                        IndexOfPrevTag += 1;
-//                    }
-//
-//                }
-//                TagAndWord[IndexOfTag][IndexOfWord] = Proba;
-//                TagPath[IndexOfTag][IndexOfWord] = PrevTagIndex;
-//                IndexOfTag += 1;
-//            }
-//            IndexOfWord += 1;
-//        }
-
-//
-//        List<String> res = new ArrayList<>();
-//        Double t=.0;
-//        for(int i=0;i<numTags;i++){
-//                System.out.println(TagAndWord[i][2]);
-//
-//        }
-
-//        while(ItWords.hasNext()){
-//            String word = ItWords.next();
-//            int indexOfWord = ItWords.nextIndex();
-//            while(ItTags.hasNext()){
-//                String tag = ItTags.next();
-//                int indexOfTag = ItTags.nextIndex();
-//                if(model.emissionProb.get(tag).get(word)!=null){
-//                    while(ItPrevTags.hasNext()){
-//                        String PrevTag = ItPrevTags.next();
-//                        int indexOfPrevTag = ItPrevTags.nextIndex();
-//                        if(model.transitionProb.get(PrevTag).get(tag)!=null){
-//                            Double maxProb=.0;
-//                            for(int i=0;i<numTags;i++){
-//                                if(Tag_Tag_word[i][indexOfPrevTag][indexOfWord]!=null
-//                                && Tag_Tag_word[i][indexOfPrevTag][indexOfWord]>maxProb){
-//                                    maxProb = Tag_Tag_word[i][indexOfPrevTag][indexOfWord];
-//                                }
-//                            }
-//                            if(maxProb!=.0) {
-//                                Tag_Tag_word[indexOfPrevTag][indexOfTag][indexOfWord] = model.transitionProb.get(PrevTag).get(tag)
-//                                        * model.emissionProb.get(tag).get(word);
-//                            }
-//                            else{
-//                                Tag_Tag_word[indexOfPrevTag][indexOfTag][indexOfWord] = maxProb * model.transitionProb.get(PrevTag).get(tag)
-//                                        * model.emissionProb.get(tag).get(word);
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//
-//
-//        Double Proba = .0;
-//        List<String> resu = new ArrayList<>();
-//        int indexOfPt = 0;
-//        for(int i=0;i<numWords;i++){
-//            for(int j=0;j<numTags;j++){
-//                if(Tag_Tag_word[x][j][i]!=null && Tag_Tag_word[x][j][i] > Proba){
-//                    Proba = Tag_Tag_word[x][j][i];
-//                    indexOfPt = j;
-//                }
-//            }
-//            resu.add(tags.get(indexOfPt));
-//            x = indexOfPt;
-//        }
-//
-//
-//        while(ItWords.hasNext()){
-//            String word = ItWords.next();
-//            int IndexOfWord = ItWords.nextIndex();
-//            while(ItTags.hasNext()){
-//                String tag = ItTags.next();
-//                int IndexOfTag = ItTags.nextIndex();
-//            }
-//        }
-
-
 
 
     /**
