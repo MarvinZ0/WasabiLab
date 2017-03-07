@@ -13,8 +13,6 @@ import java.util.TreeMap;
 /**
  * Skeleton for a Hidden Markov Model
  *
- * @author Fabian M. Suchanek
- *
  */
 public class HiddenMarkovModel {
 
